@@ -1,4 +1,19 @@
-.button{
+#PassageirosButton{
+	-fx-background-color:"blue";
+	-fx-font-size:15;
+	-fx-font-family: "Lucida Console";
+	-fx-text-fill:"white";
+}
+
+#VoosButton{
+	-fx-background-color:"blue";
+	-fx-font-size:15;
+	-fx-font-family: "Lucida Console";
+	-fx-text-fill:"white";
+	-fx-pref-width:100px;
+}
+
+#BilhetesButton{
 	-fx-background-color:"blue";
 	-fx-font-size:15;
 	-fx-font-family: "Lucida Console";

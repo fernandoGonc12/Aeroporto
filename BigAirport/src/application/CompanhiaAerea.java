@@ -17,7 +17,7 @@ public class CompanhiaAerea {
 		this.codCompan = codCompan;
 	}
 
-	private String getNomeCompanhia() {
+	public String getNomeCompanhia() {
 		return nomeCompanhia;
 	}
 
