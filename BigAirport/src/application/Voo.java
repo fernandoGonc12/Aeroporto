@@ -29,7 +29,7 @@ public class Voo {
 		this.qtdPassageiros = qtdPassageiros;
 	}
 
-	private String getNumVoo() {
+	public String getNumVoo() {
 		return numVoo;
 	}
 
@@ -37,7 +37,7 @@ public class Voo {
 		this.numVoo = numVoo;
 	}
 
-	private Aeroporto getOrigem() {
+	public Aeroporto getOrigem() {
 		return origem;
 	}
 
@@ -45,7 +45,7 @@ public class Voo {
 		this.origem = origem;
 	}
 
-	private Aeroporto getDestino() {
+	public Aeroporto getDestino() {
 		return destino;
 	}
 
@@ -53,7 +53,7 @@ public class Voo {
 		this.destino = destino;
 	}
 
-	private Calendar getDataHoraOrigem() {
+	public Calendar getDataHoraOrigem() {
 		return dataHoraOrigem;
 	}
 
@@ -61,7 +61,7 @@ public class Voo {
 		this.dataHoraOrigem = dataHoraOrigem;
 	}
 
-	private Calendar getDataHoraDestino() {
+	public Calendar getDataHoraDestino() {
 		return dataHoraDestino;
 	}
 

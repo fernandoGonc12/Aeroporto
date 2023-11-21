@@ -24,40 +24,6 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class PassageirosController implements Initializable {
-	@FXML
-	Label sucessoLabel;
-	
-	//Endereco
-	@FXML
-	TextField RuaPassageiroInput;
-	@FXML
-	TextField NumPassageiroInput;
-	@FXML
-	TextField BairroPassageiroInput;
-	@FXML
-	TextField CidadePassageiroInput;
-	@FXML
-	TextField CepPassageiroInput;
-	
-	//Passageiro
-	@FXML
-	TextField NomePassageiroInput;
-	@FXML
-	TextField CpfPassageiroInput;
-	@FXML
-	TextField RgPassageiroInput;
-	@FXML
-	TextField CelularPassageiroInput;
-	@FXML
-	TextField DataNascPassageiroInput;
-	@FXML
-	TextField PassaportePassageiroInput;
-	
-	@FXML
-	Label SucessoLabel;
-	
-	
-	
 	private Stage stage;
 	private Scene scene;
 	private Parent root;
@@ -70,36 +36,6 @@ public class PassageirosController implements Initializable {
 		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		stage.setScene(scene);
 		stage.show();
-	}
-	
-	public void cadastrarPassageiro(ActionEvent event) throws IOException{
-		
-		//Endereco
-		String rua = RuaPassageiroInput.getText();
-		String numero = NumPassageiroInput.getText();
-		String bairro = BairroPassageiroInput.getText();
-		String cidade = CidadePassageiroInput.getText();
-		String cep = CepPassageiroInput.getText();
-		
-		//Passageiro
-		String nome = NomePassageiroInput.getText();
-		String cpf = CpfPassageiroInput.getText();
-		String rg = RgPassageiroInput.getText();
-		String celular = CelularPassageiroInput.getText();
-		String dataNascimento = DataNascPassageiroInput.getText();
-		String passaporte = PassaportePassageiroInput.getText();
-		
-		Endereco endereco = new Endereco(rua,Integer.parseInt(numero),bairro,cidade,cep);
-		Passageiro passageiro = new Passageiro(nome,cpf,rg,endereco,celular,dataNascimento,passaporte);
-		try {
-			a.adicionar("Passageiro", passageiro);
-			//sucessoLabel.setVisible(true);
-			//Thread.sleep(2000);
-			//sucessoLabel.setVisible(false);
-		}
-		catch(Exception e){
-			e.printStackTrace();
-		}
 	}
 	
 	public ObservableList<DadoPassageiro> listarPassageiros() {
@@ -154,6 +90,6 @@ public class PassageirosController implements Initializable {
 	            return passaporte;
 	        }
 
-	    }
+	 }
 	
 }

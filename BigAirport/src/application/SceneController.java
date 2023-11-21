@@ -26,4 +26,13 @@ public class SceneController {
 		stage.setScene(scene);
 		stage.show();
 	}
+	
+	public void switchToVoos(ActionEvent event) throws IOException {
+		root = FXMLLoader.load(getClass().getResource("Voos.fxml"));
+		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+		scene = new Scene(root);
+		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+		stage.setScene(scene);
+		stage.show();
+	}
 }

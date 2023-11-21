@@ -9,7 +9,7 @@ public class Aeroporto {
 		this.setEndereco(endereco);
 	}
 
-	private String getCodAeroporto() {
+	public String getCodAeroporto() {
 		return codAeroporto;
 	}
 

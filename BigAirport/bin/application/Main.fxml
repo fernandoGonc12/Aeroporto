@@ -27,9 +27,8 @@
          </rowConstraints>
          <children>
             <Button fx:id="PassageirosButton" mnemonicParsing="false" onAction="#switchToPassageiros" prefWidth="100.0" text="Passageiros" />
-            <Button fx:id="VoosButton" mnemonicParsing="false" prefWidth="100.0" text="Voos" GridPane.rowIndex="1" />
+            <Button fx:id="VoosButton" mnemonicParsing="false" onAction="#switchToVoos" prefWidth="100.0" text="Voos" GridPane.rowIndex="1" />
             <Button fx:id="BilhetesButton" mnemonicParsing="false" prefWidth="100.0" text="Bilhetes" GridPane.rowIndex="2" />
-            <Button fx:id="SairButton" mnemonicParsing="false" prefWidth="100.0" text="Sair" GridPane.rowIndex="3" />
          </children>
       </GridPane>
    </children>

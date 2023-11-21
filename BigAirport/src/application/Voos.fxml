@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.VoosController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Lista de Voos">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="SairButton" layoutX="243.0" layoutY="17.0" mnemonicParsing="false" onAction="#switchToMenu" prefHeight="25.0" prefWidth="58.0" text="Sair" />
+      <TableView fx:id="TabelaVoo" layoutX="43.0" layoutY="53.0" prefHeight="405.0" prefWidth="1124.0">
+        <columns>
+          <TableColumn fx:id="NumVoo" prefWidth="108.0" text="NumVoo" />
+          <TableColumn fx:id="AO" prefWidth="303.0" text="Aeroporto Origem" />
+            <TableColumn fx:id="DO" prefWidth="261.0" text="Data Origem" />
+            <TableColumn fx:id="AD" minWidth="0.0" prefWidth="238.0" text="Aeroporto Destino" />
+            <TableColumn fx:id="DD" maxWidth="556.0" prefWidth="213.0" text="Data Destino" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

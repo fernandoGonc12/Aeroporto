@@ -4,10 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LinhaAerea {
-	private ArrayList<Aeroporto> aeroportos = new ArrayList<Aeroporto>();
-	private ArrayList<CompanhiaAerea> companhiasAereas = new ArrayList<CompanhiaAerea>();
 	private ArrayList<Voo> voos = new ArrayList<Voo>();
 	private ArrayList<Passageiro> passageiros = new ArrayList<Passageiro>();
+	private ArrayList<Bilhete<String>> bilhetes = new ArrayList<Bilhete<String>>();
 	
 	public void iniciar() {
 		
@@ -30,28 +29,19 @@ public class LinhaAerea {
 		Aeroporto a3 = new Aeroporto("A3Z",e3);
 		Aeroporto a4 = new Aeroporto("A4Z",e3);
 		
-		aeroportos.add(a1);
-		aeroportos.add(a2);
-		aeroportos.add(a3);
-		aeroportos.add(a4);
 		
 		CompanhiaAerea ca1 = new CompanhiaAerea("0001","Amarelo");//Azul
 		CompanhiaAerea ca2 = new CompanhiaAerea("0002","Cobrin");//Latam
 		CompanhiaAerea ca3 = new CompanhiaAerea("0003","Falta");//Gol
 		CompanhiaAerea ca4 = new CompanhiaAerea("0004","Brasileirao");//Copa Airlines
 		
-		companhiasAereas.add(ca1);
-		companhiasAereas.add(ca2);
-		companhiasAereas.add(ca3);
-		companhiasAereas.add(ca4);
-		
-		Voo v1 = new Voo("",a1,a2,Horario.novo_DataHora(1,1,2001,14,30,00),
+		Voo v1 = new Voo("122",a1,a2,Horario.novo_DataHora(1,1,2001,14,30,00),
 				Horario.novo_DataHora(1,1,2001,18,30,00),100);
-		Voo v2 = new Voo("",a1,a3,Horario.novo_DataHora(1,1,2001,14,30,00),
+		Voo v2 = new Voo("133",a1,a3,Horario.novo_DataHora(1,1,2001,14,30,00),
 				Horario.novo_DataHora(1,1,2001,18,30,00),100);
-		Voo v3 = new Voo("",a4,a1,Horario.novo_DataHora(1,1,2001,14,30,00),
+		Voo v3 = new Voo("144",a4,a1,Horario.novo_DataHora(1,1,2001,14,30,00),
 				Horario.novo_DataHora(1,1,2001,18,30,00),100);
-		Voo v4 = new Voo("",a4,a2,Horario.novo_DataHora(1,1,2001,14,30,00),
+		Voo v4 = new Voo("155",a4,a2,Horario.novo_DataHora(1,1,2001,14,30,00),
 				Horario.novo_DataHora(1,1,2001,18,30,00),100);
 		
 		voos.add(v1);
@@ -116,39 +106,27 @@ public class LinhaAerea {
 		Bilhete<String> b3 = new Bilhete<String>("33AV85",l3,20.000,ca3);
 		Bilhete<String> b4 = new Bilhete<String>("12XV20",l4,30.000,ca4);
 		
+		bilhetes.add(b1);
+		bilhetes.add(b2);
+		bilhetes.add(b3);
+		bilhetes.add(b4);
+		
 		System.out.println(b1.toString());
 		System.out.println(b2.toString());
 		System.out.println(b3.toString());
 		System.out.println(b4.toString());
 		}
-	
-	public <T> void adicionar(String lista,T item) {
-		switch(lista) {
-		case "Aeroporto": aeroportos.add((Aeroporto)item);break;
-		case "ComapanhiaAerea": companhiasAereas.add((CompanhiaAerea)item);break;
-		case "Voo": voos.add((Voo)item);break;
-		case "Passageiro": passageiros.add((Passageiro)item);break;
-		}
-	}
-	
-
-	public ArrayList<Aeroporto> getAeroportos() {
-		return aeroportos;
-	}
-
-
-	public ArrayList<CompanhiaAerea> getCompanhiasAereas() {
-		return companhiasAereas;
-	}
-
 
 	public ArrayList<Voo> getVoos() {
 		return voos;
 	}
 
-
 	public ArrayList<Passageiro> getPassageiros() {
 		return passageiros;
+	}
+	
+	public ArrayList<Bilhete<String>> getBilhetes() {
+		return bilhetes;
 	}
 		
 }
